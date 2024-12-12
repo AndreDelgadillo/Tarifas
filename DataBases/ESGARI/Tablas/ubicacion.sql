@@ -1,0 +1,13 @@
+CREATE TABLE UBICACIONES (
+    idUbicacion INT AUTO_INCREMENT PRIMARY KEY,
+    idSolicitud INT NOT NULL,
+    nombre VARCHAR(50) NOT NULL,
+    pais VARCHAR(15) NOT NULL,
+    ciudad VARCHAR(20) NOT NULL,
+    estado VARCHAR(20) NOT NULL,
+    codigoPostal VARCHAR(9) NOT NULL,
+    CONSTRAINT fk_idSolicitud_ubicaion FOREIGN KEY (idSolicitud) REFERENCES SOLICITUD(idSolicitud)
+);
+
+ALTER TABLE UBICACIONES AUTO_INCREMENT = 1000;
+

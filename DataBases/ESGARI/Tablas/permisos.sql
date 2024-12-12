@@ -1,0 +1,8 @@
+CREATE TABLE PERMISO (
+    idRol VARCHAR(30) NOT NULL,
+    tableName VARCHAR(15) NOT NULL,
+    autor VARCHAR(8) NOT NULL,
+    fechaCreacion DATETIME DEFAULT CURRENT_TIMESTAMP,
+    CONSTRAINT fk_autor_permiso FOREIGN KEY (autor) REFERENCES USERS(idNomina),
+    CONSTRAINT fk_idRol_premiso FOREIGN KEY (idRol) REFERENCES ROLES(idRol)
+);
